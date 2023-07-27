@@ -2,27 +2,58 @@
   "name": "blog-react",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
+		"serve": "vite",
+		"build:dev": "tsc && vite build --mode development",
+		"build:test": "tsc && vite build --mode test",
+		"build:pro": "tsc && vite build --mode production",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+		"lint:eslint": "eslint --fix --ext .js,.ts,.tsx ./src",
+		"lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,less,scss,html,md}\"",
+		"lint:lint-staged": "lint-staged",
+		"preapare": "husky install",
+		"commit": "git pull && git add -A && git-cz && git push"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
+    "@types/node": "^20.4.5",
+    "@types/react": "^18.2.17",
     "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
     "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.14",
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.7.0",
     "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.0",
+    "rollup-plugin-visualizer": "^5.9.2",
+    "sass": "^1.64.1",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
-  }
+    "vite": "^4.4.5",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-html": "^3.2.0"
+  },
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-git"
+		}
+	}
 }
