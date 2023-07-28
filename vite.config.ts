@@ -42,6 +42,12 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 					target: 'https://mock.mengxuegu.com/mock/629d727e6163854a32e8307e', // easymock
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/api/, '')
+				},
+				// 一言API
+				'/hitokoto': {
+					target: 'https://v1.hitokoto.cn', // easymock
+					changeOrigin: true,
+					rewrite: path => path.replace(/^\/hitokoto/, '')
 				}
 			}
 		},
