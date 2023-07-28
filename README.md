@@ -2,6 +2,12 @@
 
 [简短的项目描述]
 
+# 原作者
+
+[仓库地址：](https://github.com/HalseySpicy/Hooks-Admin)
+
+[作者主页(github)：](https://github.com/HalseySpicy)
+
 ## 简介
 
 [项目的概述，可以包括项目的目标、功能特点等]
