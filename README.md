@@ -4,9 +4,9 @@
 
 # 原作者
 
-[仓库地址：](https://github.com/HalseySpicy/Hooks-Admin)
+仓库地址： https://github.com/HalseySpicy/Hooks-Admin
 
-[作者主页(github)：](https://github.com/HalseySpicy)
+作者主页(github)：https://github.com/HalseySpicy
 
 ## 简介
 
@@ -14,11 +14,14 @@
 
 ## 演示地址
 
-[如果有在线演示或展示页面，可以在这里提供链接]
+http://www.darling0.cn
 
 ## 技术栈
 
-- [列出项目所使用的主要技术、框架和库]
+react: https://react.docschina.org/
+<br/>
+vite: https://cn.vitejs.dev/
+
 
 ## 安装与使用
 
