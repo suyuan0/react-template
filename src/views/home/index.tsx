@@ -64,18 +64,22 @@ const Home: React.FC = () => {
 			<main className='main absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 flex flex-col items-center'>
 				{/*头像*/}
 				{/*<Avatar src='https://blogapi.darling0.cn/public/lbxx.jpeg' size={120}/>*/}
-				<img src={`${config.blogApi}/lbxx.jpeg`} className='w-32 rounded-full mb-10' />
+				<img
+					alt='我没K'
+					src={`${config.blogApi}/lbxx.jpeg`}
+					className='w-32 rounded-full mb-10 animate__animated animate__fadeInUp'
+				/>
 				{/*一言*/}
-				<span className='text-base text-white text-center mb-3'>
+				<span className='text-base text-white text-center mb-3 animate__animated animate__flipInX'>
 					{/*句子*/}
 					{hitokoto.hitokoto}
 					<br />
 					{/*	作者*/}- 「<strong>{hitokoto.from}</strong>」
 				</span>
 				{/*	图标*/}
-				<div className='icons flex items-center '>
+				<div className='icons flex items-center animate__animated animate__flipInX'>
 					{/*github*/}
-					<a className='mr-5' target='_blank' href='https://github.com/suyuan0' rel='noreferrer'>
+					<a className='mr-5 ' target='_blank' href='https://github.com/suyuan0' rel='noreferrer'>
 						<GithubOutlined className='text-2xl' style={{ color: '#FFF' }} />
 					</a>
 					{/*	邮箱*/}
