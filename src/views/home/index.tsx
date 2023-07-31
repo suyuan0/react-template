@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import './index.scss'
 import { GithubOutlined, WechatOutlined, createFromIconfontCN } from '@ant-design/icons'
 import config from '@/config'
+import SkipButton from './skipButton'
 
 // 阿里在线图标
 const IconFont = createFromIconfontCN({
@@ -12,7 +13,7 @@ const IconFont = createFromIconfontCN({
 // 随机图片
 const randomImage = () => {
 	// 随机数
-	const random = Math.ceil(Math.random() * 3)
+	const random = Math.ceil(Math.random() * 28)
 	return `${config.blogApi}/random-image/${random}.png`
 }
 
@@ -50,6 +51,7 @@ const Home: React.FC = () => {
 	const handleWeChatLeave = () => {
 		weChatEl?.classList.add('hidden')
 	}
+
 	useEffect(() => {
 		getHitokoto()
 		setImageUrl(randomImage())
@@ -66,8 +68,8 @@ const Home: React.FC = () => {
 				{/*<Avatar src='https://blogapi.darling0.cn/public/lbxx.jpeg' size={120}/>*/}
 				<img
 					alt='我没K'
-					src={`${config.blogApi}/lbxx.jpeg`}
-					className='w-32 rounded-full mb-10 animate__animated animate__fadeInUp'
+					src={`${config.blogApi}/random-image/avatar.png`}
+					className='w-32 rounded-full mb-10 animate__animated animate__fadeInUp text-white'
 				/>
 				{/*一言*/}
 				<span className='text-base text-white text-center mb-3 animate__animated animate__flipInX'>
@@ -76,6 +78,8 @@ const Home: React.FC = () => {
 					<br />
 					{/*	作者*/}- 「<strong>{hitokoto.from}</strong>」
 				</span>
+				{/*按钮导航*/}
+				<SkipButton />
 				{/*	图标*/}
 				<div className='icons flex items-center animate__animated animate__flipInX'>
 					{/*github*/}

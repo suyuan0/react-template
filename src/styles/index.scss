@@ -1,3 +1,30 @@
+/* 默认字体大小，适用于大多数屏幕 */
+html {
+  font-size: 16px;
+}
+
+/* 在较小的屏幕（如手机）上使用较小的字体大小 */
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* 在中等屏幕（如平板电脑）上使用稍大的字体大小 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* 在大屏幕（如台式电脑）上使用更大的字体大小 */
+@media (min-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+
 html, body, #root {
   width: 100%;
   height: 100%;
