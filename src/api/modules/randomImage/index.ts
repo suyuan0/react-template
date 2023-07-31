@@ -1,29 +1,22 @@
 import axios, { AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
+
 export interface ResultData {
-	commit_from: string
-	created_at: string
-	creator: string
-	creator_uid: number
-	from: string
-	from_who: string
-	hitokoto: string
-	id: number
-	length: number
-	reviewer: number
-	type: string
-	uuid: string
+	code: string
+	height: string
+	imgurl: string
+	width: string
 }
 
 const config = {
 	// 默认请求地址，可在 .env 开头中修改
-	baseURL: import.meta.env.VITE_HITOKOTO_API,
+	baseURL: import.meta.env.VITE_RANDOM_IMAGE_API,
 	// 设置超时时间（10s）
 	timeout: import.meta.env.VITE_TIME_OUT,
 	// 跨域时候允许携带凭证
 	withCredentials: true
 }
 
-class hitokotoHttp {
+class randomImageHttp {
 	service: AxiosInstance
 
 	public constructor(config: AxiosRequestConfig) {
@@ -56,4 +49,4 @@ class hitokotoHttp {
 	}
 }
 
-export default new hitokotoHttp(config)
+export default new randomImageHttp(config)
