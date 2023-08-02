@@ -1,7 +1,7 @@
 import Axios, { AxiosRequestConfig, Canceler } from 'axios'
 import { isFunction } from '@/utils/is'
 import qs from 'qs'
-// 声明一个 Map 用于存储每个请求的标识 和 取消函数
+// 声明一个 AMap 用于存储每个请求的标识 和 取消函数
 let pendingMap = new Map<string, Canceler>()
 
 // 序列化参数

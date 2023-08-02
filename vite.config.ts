@@ -48,12 +48,6 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 					target: 'https://v1.hitokoto.cn', // easymock
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/hitokoto/, '')
-				},
-				// 随机图片api
-				'/randomImage': {
-					target: 'https://www.dmoe.cc/random.php', // easymock
-					changeOrigin: true,
-					rewrite: path => path.replace(/^\/randomImage/, '')
 				}
 			}
 		},
