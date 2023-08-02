@@ -1,18 +1,15 @@
 import React from 'react'
-import { Layout } from 'antd'
 import './index.scss'
-import { Outlet } from 'react-router-dom'
-
-const { Header, Content, Footer } = Layout
+import AppHeader from '@/layouts/components/AppHeader/Index'
+import AppContent from '@/layouts/components/AppContent'
+import AppFooter from '@/layouts/components/AppFooter'
 
 const LayoutContainer: React.FC = () => {
 	return (
-		<section className='layout-container flex flex-col h-full'>
-			<Header>Header</Header>
-			<Content className='overflow-scroll'>
-				<Outlet ></Outlet>
-			</Content>
-			<Footer>Footer</Footer>
+		<section className='layout-container flex flex-col min-h-full'>
+			<AppHeader></AppHeader>
+			<AppContent />
+			<AppFooter />
 		</section>
 	)
 }

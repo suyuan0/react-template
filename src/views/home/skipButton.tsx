@@ -44,10 +44,10 @@ const SkipButton: React.FC = () => {
 		}
 	}
 	return (
-		<div className='mb-5'>
-			{menuList.map(v => {
+		<div className='w-full mb-5 flex justify-center'>
+			{menuList.map((v, i) => {
 				return (
-					<Button className='text-white mr-3' onClick={() => handleSkip(v)} key={v.id}>
+					<Button className={i === 1 ? 'text-white mr-2 ml-2' : 'text-white'} onClick={() => handleSkip(v)} key={v.id}>
 						{v.title}
 					</Button>
 				)
