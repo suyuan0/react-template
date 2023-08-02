@@ -2,14 +2,11 @@ import hitokotoAPI from '@/api/modules/hitokoto/hitokotoAPI'
 import { ResultData } from '@/api/modules/hitokoto'
 import React, { useCallback, useEffect, useState } from 'react'
 import './index.scss'
-import { GithubOutlined, WechatOutlined, createFromIconfontCN } from '@ant-design/icons'
+import { GithubOutlined, WechatOutlined } from '@ant-design/icons'
+import AntCustomIcon from '@/icon/AntCustomIcon/Index'
 import config from '@/config'
 import SkipButton from './skipButton'
 
-// 阿里在线图标
-const IconFont = createFromIconfontCN({
-	scriptUrl: '//at.alicdn.com/t/c/font_4190212_em2n4fr4jri.js'
-})
 // 随机图片
 const randomImage = () => {
 	// 随机数
@@ -88,7 +85,7 @@ const Home: React.FC = () => {
 					</a>
 					{/*	邮箱*/}
 					<a href='mailto:c_moon_824@163.com' className='mr-5 -mb-1.5 cursor-pointer'>
-						<IconFont className='text-2xl' style={{ color: '#FFF' }} type='icon-email' />
+						<AntCustomIcon type='icon-email' className='text-2xl' />
 					</a>
 					{/*	微信*/}
 					<div className='relative'>

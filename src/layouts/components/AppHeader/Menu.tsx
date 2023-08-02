@@ -1,6 +1,7 @@
 import type { MenuProps } from 'antd'
 import { Menu } from 'antd'
 import React from 'react'
+import AntCustomIcon from '@/icon/AntCustomIcon/Index'
 
 const items: MenuProps['items'] = [
 	{
@@ -25,11 +26,13 @@ const items: MenuProps['items'] = [
 	},
 	{
 		label: '周六',
-		key: 'saturday'
+		key: 'saturday',
+		icon: <AntCustomIcon type='icon-yueliang' />
 	},
 	{
 		label: '周日',
-		key: 'sunday'
+		key: 'sunday',
+		icon: <AntCustomIcon type='icon-taiyang' />
 	}
 ]
 
