@@ -1,6 +1,6 @@
 import { Header } from 'antd/es/layout/layout'
 import React from 'react'
-import AppMenu from './Menu'
+import AppMenu from './Menu/index'
 
 /**
  * 头部组件

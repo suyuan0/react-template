@@ -1,54 +1,20 @@
 import type { MenuProps } from 'antd'
-import { Menu, Tooltip, ConfigProvider } from 'antd'
+import { Menu, ConfigProvider } from 'antd'
 import React, { useEffect, useState } from 'react'
-import AntCustomIcon from '@/icon/AntCustomIcon/Index'
 import { useNavigate } from 'react-router-dom'
 // import {searchRoute} from "@/utils/util";
+import Items from './Items'
+import { rootRouter } from '@/routers'
+import { searchRoute } from '@/utils/util'
 
-const items: MenuProps['items'] = [
-	{
-		label: <Tooltip title='周一：起床时感觉像被地心引力牵扯着，脚步沉重。'>重力失效</Tooltip>,
-		key: 'monday',
-		icon: <AntCustomIcon type='icon-biaoqing-qi-' />
-	},
-	{
-		label: <Tooltip title='周二：工作时状态起伏不定，时而充满活力，时而感觉精神涣散'>幽灵上身</Tooltip>,
-		key: 'tuesday',
-		icon: <AntCustomIcon type='icon-853' />
-	},
-	{
-		label: <Tooltip title='周三：早上觉得还有点疲劳，下午开始恢复活力，感觉像在和时间拔河'>拔河比赛</Tooltip>,
-		key: 'wednesday',
-		icon: <AntCustomIcon type='icon-bahe' />
-	},
-	{
-		label: <Tooltip title='周四：感觉时间过的很快，转眼就到了周末'>时光机器</Tooltip>,
-		key: 'thursday',
-		icon: <AntCustomIcon type='icon-a-99' />
-	},
-	{
-		label: <Tooltip title='周五：工作日最后一天，期待着放飞自我的周末'>翘课党</Tooltip>,
-		key: 'friday',
-		icon: <AntCustomIcon type='icon-myPass' />
-	},
-	{
-		label: <Tooltip title='周六：逃离了工作的束缚，迎来自由自在的一天'>逃犯</Tooltip>,
-		key: 'saturday',
-		icon: <AntCustomIcon type='icon-yueliang' />
-	},
-	{
-		label: <Tooltip title='周日：倒计时到周末结束，迎接新一周的挑战'>倒计时</Tooltip>,
-		key: 'sunday',
-		icon: <AntCustomIcon type='icon-taiyang' />
-	}
-]
 type Theme = 'dark' | 'light'
 const HeaderMenu: React.FC = () => {
 	const navigate = useNavigate()
 	const handleOnClick: MenuProps['onClick'] = ({ key }: { key: string }) => {
-		console.log(items, key)
 		// const route = searchRoute(key, items)
-		navigate('/amap')
+		const route = searchRoute(key, rootRouter)
+		if (route.isLink) window.open(route.isLink, '_blank')
+		route.path && navigate(key)
 	}
 	// 主题
 	const [theme, setTheme] = useState<Theme>()
@@ -72,7 +38,7 @@ const HeaderMenu: React.FC = () => {
 	}, [])
 	return (
 		<ConfigProvider>
-			<Menu onClick={handleOnClick} className='h-14' mode='horizontal' theme={theme} items={items} />
+			<Menu onClick={handleOnClick} mode='horizontal' theme={theme} items={Items} />
 		</ConfigProvider>
 	)
 }
