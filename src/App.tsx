@@ -6,7 +6,13 @@ import AuthRouter from '@/routers/utils/authRouter'
 function App() {
 	return (
 		<HashRouter>
-			<ConfigProvider>
+			<ConfigProvider
+				theme={{
+					token: {
+
+					}
+				}}
+			>
 				<AuthRouter>
 					<Router />
 				</AuthRouter>

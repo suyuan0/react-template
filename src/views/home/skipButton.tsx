@@ -1,4 +1,4 @@
-import { Button } from 'antd'
+import { Button, Space } from 'antd'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import routePath from '@/config/routePath'
@@ -44,15 +44,24 @@ const SkipButton: React.FC = () => {
 		}
 	}
 	return (
-		<div className='w-full mb-5 flex justify-center'>
+		<Space className='mb-5'>
 			{menuList.map((v, i) => {
 				return (
-					<Button className={i === 1 ? 'text-white mr-2 ml-2' : 'text-white'} onClick={() => handleSkip(v)} key={v.id}>
+					<Button ghost className={i === 1 ? 'text-white mr-2 ml-2' : ''} onClick={() => handleSkip(v)} key={v.id}>
 						{v.title}
 					</Button>
 				)
 			})}
-		</div>
+		</Space>
+		// <div className='w-full mb-5 flex justify-center'>
+		// 	{menuList.map((v, i) => {
+		// 		return (
+		// 			<Button ghost className={i === 1 ? 'text-white mr-2 ml-2' : ''} onClick={() => handleSkip(v)} key={v.id}>
+		// 				{v.title}
+		// 			</Button>
+		// 		)
+		// 	})}
+		// </div>
 	)
 }
 export default SkipButton

@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom'
 const AppContent: React.FC = () => {
 	return (
 		<Content className='pt-16'>
-			<Outlet />
+			<Outlet></Outlet>
 		</Content>
 	)
 }

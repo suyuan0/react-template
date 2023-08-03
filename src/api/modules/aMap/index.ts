@@ -8,10 +8,10 @@ export const aMapIpAPI = async (): Promise<aMapApiFace> => {
 }
 
 // 获取当前位置的天气
-export const aMapWeatherAPI = async (params: aMapWeather.requestData): Promise<aMapWeather.resData> => {
-	return (await axios.get(
-		`${MAP_URL}/v3/weather/weatherInfo?key=${MAP_KEY}`, {
+export const aMapWeatherAPI = async (params: aMapWeather.requestData) => {
+	return (
+		await axios.get(`${MAP_URL}/v3/weather/weatherInfo?key=${MAP_KEY}`, {
 			params: params
-		}
-	)).data
+		})
+	).data
 }

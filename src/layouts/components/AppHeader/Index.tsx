@@ -8,7 +8,7 @@ import AppMenu from './Menu'
  */
 const AppHeader: React.FC = () => {
 	return (
-		<Header className='opacity-90 fixed w-full h-14 transition-colors duration-500 bg-white dark:bg-lime-950/70 backdrop-blur-2xl supports-backdrop-blur:bg-white/95'>
+		<Header className='opacity-90 fixed w-full h-14 transition-colors duration-500 bg-white dark:bg-transparent backdrop-blur-2xl supports-backdrop-blur:bg-white/95'>
 			<AppMenu/>
 		</Header>
 	)

@@ -4,5 +4,7 @@ export default {
     // 首页
     HOME_URL: '/home',
     // 个人页
-    PRO_FILE: '/proFile'
+    PRO_FILE: '/proFile',
+    // 地图页
+    MAP_PATH: '/amap'
 }

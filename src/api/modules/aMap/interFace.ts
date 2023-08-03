@@ -42,4 +42,35 @@ export namespace aMapWeather {
 		length: string
 		status: string
 	}
+
+	export interface castsItem {
+		date: string
+		daypower: string
+		daytemp: string
+		daytemp_float: string
+		dayweather: string
+		daywind: string
+		nightpower: string
+		nighttemp: string
+		nighttemp_float: string
+		nightweather: string
+		nightwind: string
+		week: string
+	}
+
+	export interface forecastsItem {
+		adcode: string
+		casts: Array<castsItem>
+		city: string
+		province: string
+		reporttime: string
+	}
+
+	export interface resDataAll {
+		count: string
+		forecasts: Array<forecastsItem>
+		info: string
+		infocode: string
+		status: string
+	}
 }
