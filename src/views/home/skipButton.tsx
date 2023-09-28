@@ -7,26 +7,32 @@ interface menuListFace {
 	url?: string
 	id: number
 	title: string
-	skipMode: string
+	skipMode: 'link' | 'route'
 }
 
 const menuList: Array<menuListFace> = [
 	{
 		url: routePath.PRO_FILE,
 		id: 1,
-		title: '首页',
+		title: 'Home',
 		skipMode: 'route'
 	},
 	{
 		id: 2,
-		title: '其他',
+		title: 'Other',
 		skipMode: 'route'
 	},
 	{
-		url: 'https://cherry.darling0.cn',
+		// url: 'https://cherry.darling0.cn',
 		id: 3,
-		title: 'cherry',
-		skipMode: 'link'
+		title: 'Cherry',
+		skipMode: 'route'
+	},
+	{
+		url: '/myHere',
+		id: 4,
+		title: 'My Here',
+		skipMode: 'route'
 	}
 ]
 

@@ -71,7 +71,14 @@ const Home: React.FC = () => {
 				{/*一言*/}
 				<span className='text-base text-white text-center mb-3 animate__animated animate__flipInX'>
 					{/*句子*/}
-					{hitokoto.hitokoto}
+					<a
+						className='hover:text-purple-600 duration-1000 cursor-pointer'
+						target='_blank'
+						rel='noopener noreferrer'
+						href={'https://hitokoto.cn/?uuid=' + hitokoto.uuid}
+					>
+						{hitokoto.hitokoto}
+					</a>
 					<br />
 					{/*	作者*/}- 「<strong>{hitokoto.from}</strong>」
 				</span>
