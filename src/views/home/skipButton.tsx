@@ -33,6 +33,12 @@ const menuList: Array<menuListFace> = [
 		id: 4,
 		title: 'My Here',
 		skipMode: 'route'
+	},
+	{
+		url: '/wlfMeta60Pro',
+		id: 5,
+		title: '王龙飞专属',
+		skipMode: 'route'
 	}
 ]
 

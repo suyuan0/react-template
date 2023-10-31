@@ -48,6 +48,11 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 					target: 'https://v1.hitokoto.cn', // easymock
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/hitokoto/, '')
+				},
+				'/renren': {
+					target: 'https://www.darling0.cn/renren',
+					changeOrigin: true,
+					rewrite: path => path.replace(/^\/renren/, '')
 				}
 			}
 		},

@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
-import { AxiosCanceler } from './helper/axiosCancel'
+// import { AxiosCanceler } from './helper/axiosCancel'
 import { checkStatus } from './helper/checkStatus'
 import NProgress from '@/config/nprogress'
 import { showFullScreenLoading, tryHideFullScreenLoading } from '@/config/serviceLoading'
@@ -7,8 +7,7 @@ import { message } from 'antd'
 import { ResultEnum } from '@/enums/httpEnum'
 import { ResultData } from '@/api/interface'
 
-const axiosCanceler = new AxiosCanceler()
-
+// const axiosCanceler = new AxiosCanceler()
 const config = {
 	// 默认请求地址，可在 .env 开头中修改
 	baseURL: import.meta.env.VITE_BASE_URL as string,
@@ -36,7 +35,7 @@ class RequestHttp {
 			(config: AxiosRequestConfig) => {
 				NProgress.start()
 				// * 将当前请求添加到 pending 中
-				axiosCanceler.addPending(config)
+				// axiosCanceler.addPending(config)
 				// * 如果当前请求不需要显示 loading,在api服务中通过指定的第三个参数: { headers: { noLoading: true } }来控制不显示loading，参见loginApi
 				config.headers!.noLoading || showFullScreenLoading()
 				// const token: string = store.getState().global.token;
@@ -53,10 +52,10 @@ class RequestHttp {
 		 */
 		this.service.interceptors.response.use(
 			(response: AxiosResponse) => {
-				const { data, config } = response
+				const { data } = response
 				NProgress.done()
 				// * 在请求结束后，移除本次请求(关闭loading)
-				axiosCanceler.removePending(config)
+				// axiosCanceler.removePending(config)
 				tryHideFullScreenLoading()
 				// * 登录失效（code == 599）
 				// if (data.code == ResultEnum.OVERDUE) {

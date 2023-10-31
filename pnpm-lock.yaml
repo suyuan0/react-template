@@ -4,9 +4,15 @@ dependencies:
   '@amap/amap-jsapi-types':
     specifier: ^0.0.13
     version: registry.npmmirror.com/@amap/amap-jsapi-types@0.0.13
+  '@ant-design/cssinjs':
+    specifier: ^1.17.0
+    version: registry.npmmirror.com/@ant-design/cssinjs@1.17.0(react-dom@18.2.0)(react@18.2.0)
   '@ant-design/icons':
     specifier: ^5.1.4
     version: registry.npmmirror.com/@ant-design/icons@5.2.6(react-dom@18.2.0)(react@18.2.0)
+  '@types/react-lazyload':
+    specifier: ^3.2.1
+    version: registry.npmmirror.com/@types/react-lazyload@3.2.1
   animate.css:
     specifier: ^4.1.1
     version: registry.npmmirror.com/animate.css@4.1.1
@@ -22,6 +28,9 @@ dependencies:
   nprogress:
     specifier: ^0.2.0
     version: registry.npmmirror.com/nprogress@0.2.0
+  plyr:
+    specifier: ^3.7.8
+    version: registry.npmmirror.com/plyr@3.7.8
   qs:
     specifier: ^6.11.2
     version: registry.npmmirror.com/qs@6.11.2
@@ -1435,6 +1444,14 @@ packages:
     dependencies:
       '@types/react': registry.npmmirror.com/@types/react@18.2.23
 
+  registry.npmmirror.com/@types/react-lazyload@3.2.1:
+    resolution: {integrity: sha512-LeJMJVTEGxcOLy9OFErOqNXIo506pxxDA/zgpTy8Bub508c1OS1Br4+b6jnhsOQQl4IwPPAnEDMqCnBJ9jauUw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/react-lazyload/-/react-lazyload-3.2.1.tgz}
+    name: '@types/react-lazyload'
+    version: 3.2.1
+    dependencies:
+      '@types/react': registry.npmmirror.com/@types/react@18.2.23
+    dev: false
+
   registry.npmmirror.com/@types/react@18.2.23:
     resolution: {integrity: sha512-qHLW6n1q2+7KyBEYnrZpcsAmU/iiCh9WGCKgXvMxx89+TYdJWRjZohVIo9XTcoLhfX3+/hP0Pbulu3bCZQ9PSA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/react/-/react-18.2.23.tgz}
     name: '@types/react'
@@ -2575,6 +2592,13 @@ packages:
       toggle-selection: registry.npmmirror.com/toggle-selection@1.0.6
     dev: false
 
+  registry.npmmirror.com/core-js@3.33.0:
+    resolution: {integrity: sha512-HoZr92+ZjFEKar5HS6MC776gYslNOKHt75mEBKWKnPeFDpZ6nH5OeF3S6HFT1mUAUZKrzkez05VboaX8myjSuw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/core-js/-/core-js-3.33.0.tgz}
+    name: core-js
+    version: 3.33.0
+    requiresBuild: true
+    dev: false
+
   registry.npmmirror.com/cosmiconfig-typescript-loader@4.4.0(@types/node@20.4.7)(cosmiconfig@8.3.6)(ts-node@10.9.1)(typescript@5.2.2):
     resolution: {integrity: sha512-BabizFdC3wBHhbI4kJh0VkQP9GkBfoHPydD0COMce1nJ1kJAB3F2TmJ/I7diULBKtmEWSwEbuN/KDtgnmUUVmw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cosmiconfig-typescript-loader/-/cosmiconfig-typescript-loader-4.4.0.tgz}
     id: registry.npmmirror.com/cosmiconfig-typescript-loader/4.4.0
@@ -2660,6 +2684,12 @@ packages:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/csstype/-/csstype-3.1.2.tgz}
     name: csstype
     version: 3.1.2
+
+  registry.npmmirror.com/custom-event-polyfill@1.0.7:
+    resolution: {integrity: sha512-TDDkd5DkaZxZFM8p+1I3yAlvM3rSr1wbrOliG4yJiwinMZN8z/iGL7BTlDkrJcYTmgUSb4ywVCc3ZaUtOtC76w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/custom-event-polyfill/-/custom-event-polyfill-1.0.7.tgz}
+    name: custom-event-polyfill
+    version: 1.0.7
+    dev: false
 
   registry.npmmirror.com/cz-conventional-changelog@3.3.0:
     resolution: {integrity: sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cz-conventional-changelog/-/cz-conventional-changelog-3.3.0.tgz}
@@ -4882,6 +4912,12 @@ packages:
       wrap-ansi: registry.npmmirror.com/wrap-ansi@8.1.0
     dev: true
 
+  registry.npmmirror.com/loadjs@4.2.0:
+    resolution: {integrity: sha512-AgQGZisAlTPbTEzrHPb6q+NYBMD+DP9uvGSIjSUM5uG+0jG15cb8axWpxuOIqrmQjn6scaaH8JwloiP27b2KXA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/loadjs/-/loadjs-4.2.0.tgz}
+    name: loadjs
+    version: 4.2.0
+    dev: false
+
   registry.npmmirror.com/locate-path@5.0.0:
     resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/locate-path/-/locate-path-5.0.0.tgz}
     name: locate-path
@@ -5669,6 +5705,18 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
+  registry.npmmirror.com/plyr@3.7.8:
+    resolution: {integrity: sha512-yG/EHDobwbB/uP+4Bm6eUpJ93f8xxHjjk2dYcD1Oqpe1EcuQl5tzzw9Oq+uVAzd2lkM11qZfydSiyIpiB8pgdA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/plyr/-/plyr-3.7.8.tgz}
+    name: plyr
+    version: 3.7.8
+    dependencies:
+      core-js: registry.npmmirror.com/core-js@3.33.0
+      custom-event-polyfill: registry.npmmirror.com/custom-event-polyfill@1.0.7
+      loadjs: registry.npmmirror.com/loadjs@4.2.0
+      rangetouch: registry.npmmirror.com/rangetouch@2.0.1
+      url-polyfill: registry.npmmirror.com/url-polyfill@1.1.12
+    dev: false
+
   registry.npmmirror.com/postcss-import@15.1.0(postcss@8.4.30):
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/postcss-import/-/postcss-import-15.1.0.tgz}
     id: registry.npmmirror.com/postcss-import/15.1.0
@@ -5837,6 +5885,12 @@ packages:
     version: 4.0.1
     engines: {node: '>=8'}
     dev: true
+
+  registry.npmmirror.com/rangetouch@2.0.1:
+    resolution: {integrity: sha512-sln+pNSc8NGaHoLzwNBssFSf/rSYkqeBXzX1AtJlkJiUaVSJSbRAWJk+4omsXkN+EJalzkZhWQ3th1m0FpR5xA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rangetouch/-/rangetouch-2.0.1.tgz}
+    name: rangetouch
+    version: 2.0.1
+    dev: false
 
   registry.npmmirror.com/rc-align@4.0.15(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-wqJtVH60pka/nOX7/IspElA8gjPNQKIx/ZqJ6heATCkXpe1Zg4cPVrMD2vC96wjsFFL8WsmhPbx9tdMo1qqlIA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rc-align/-/rc-align-4.0.15.tgz}
@@ -7688,6 +7742,12 @@ packages:
     dependencies:
       punycode: registry.npmmirror.com/punycode@2.3.0
     dev: true
+
+  registry.npmmirror.com/url-polyfill@1.1.12:
+    resolution: {integrity: sha512-mYFmBHCapZjtcNHW0MDq9967t+z4Dmg5CJ0KqysK3+ZbyoNOWQHksGCTWwDhxGXllkWlOc10Xfko6v4a3ucM6A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/url-polyfill/-/url-polyfill-1.1.12.tgz}
+    name: url-polyfill
+    version: 1.1.12
+    dev: false
 
   registry.npmmirror.com/use-sync-external-store@1.2.0(react@18.2.0):
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz}

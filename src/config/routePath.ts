@@ -11,5 +11,8 @@ export default {
     monday: {
         // 糟糕的心情
         badMood: '/badMood'
-    }
+    },
+    // 王龙飞专属
+    wlfMeta60Pro: '/wlfMeta60Pro',
+    sjrMeta60Pro: '/sjrMeta60Pro'
 }

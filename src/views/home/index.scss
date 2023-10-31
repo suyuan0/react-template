@@ -1,6 +1,7 @@
-.home-wrapper{
+.home-wrapper {
   height: 100%;
-  &::before{
+
+  &::before {
     content: '';
     display: block;
     position: absolute;
@@ -10,7 +11,9 @@
     height: 100%;
     background: rgba(0, 0, 0, .55);
   }
+
   .main {
+
     .wechat {
       width: 152px;
       height: 152px;
