@@ -60,7 +60,8 @@ const Home: React.FC = () => {
 			className='home-wrapper relative'
 			style={{ background: `url(${imageUrl}) center center/cover no-repeat rgb(102, 102, 102)` }}
 		>
-			<main className='main absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 flex flex-col items-center'>
+			<main
+				className='main absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 flex flex-col items-center'>
 				{/*头像*/}
 				{/*<Avatar src='https://blogapi.darling0.cn/public/lbxx.jpeg' size={120}/>*/}
 				<img
@@ -79,20 +80,20 @@ const Home: React.FC = () => {
 					>
 						{hitokoto.hitokoto}
 					</a>
-					<br />
-					{/*	作者*/}- 「<strong>{hitokoto.from}</strong>」
+					<br/>
+					{/*	作者*/}- {hitokoto.from_who}「<strong>{hitokoto.from}</strong>」
 				</span>
 				{/*按钮导航*/}
-				<SkipButton />
+				<SkipButton/>
 				{/*	图标*/}
 				<div className='icons flex items-center animate__animated animate__flipInX'>
 					{/*github*/}
 					<a className='mr-5 ' target='_blank' href='https://github.com/suyuan0' rel='noreferrer'>
-						<GithubOutlined className='text-2xl' style={{ color: '#FFF' }} />
+						<GithubOutlined className='text-2xl' style={{color: '#FFF'}}/>
 					</a>
 					{/*	邮箱*/}
 					<a href='mailto:c_moon_824@163.com' className='mr-5 -mb-1.5 cursor-pointer'>
-						<AntCustomIcon type='icon-email' className='text-2xl' />
+						<AntCustomIcon type='icon-email' className='text-2xl'/>
 					</a>
 					{/*	微信*/}
 					<div className='relative'>
@@ -107,11 +108,13 @@ const Home: React.FC = () => {
 							onMouseLeave={handleWeChatLeave}
 							onMouseOver={handleWeChatShow}
 							className='text-2xl cursor-pointer'
-							style={{ color: '#FFF' }}
+							style={{color: '#FFF'}}
 						/>
 					</div>
 				</div>
 			</main>
+			{/*	备案信息*/}
+			<a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer" className='absolute bottom-2 left-1/2 -translate-x-1/2 text-white text-xs'>京ICP备2022025012号-1</a>
 		</div>
 	)
 }
